@@ -215,6 +215,9 @@ describe("schema", () => {
             aliasRef: true,
             topRef: true,
         });
+
+        assertSchema("type-alias-or", "MyObject");
+
         // disabled because of #80
         // assertSchema("type-aliases-recursive-alias-topref", "MyAlias", {
         //     useTypeAliasRef: true,
@@ -238,8 +241,8 @@ describe("schema", () => {
         assertSchema("type-aliases-recursive-anonymous", "MyAlias");
         assertSchema("type-aliases-recursive-export", "MyObject");
         */
-        assertSchema("type-aliases-tuple-of-variable-length", "MyTuple");
-        assertSchema("type-aliases-tuple-with-rest-element", "MyTuple");
+        // assertSchema("type-aliases-tuple-of-variable-length", "MyTuple");
+        // assertSchema("type-aliases-tuple-with-rest-element", "MyTuple");
     });
 
     describe("enums", () => {
