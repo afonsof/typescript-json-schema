@@ -241,8 +241,8 @@ describe("schema", () => {
         assertSchema("type-aliases-recursive-anonymous", "MyAlias");
         assertSchema("type-aliases-recursive-export", "MyObject");
         */
-        // assertSchema("type-aliases-tuple-of-variable-length", "MyTuple");
-        // assertSchema("type-aliases-tuple-with-rest-element", "MyTuple");
+        assertSchema("type-aliases-tuple-of-variable-length", "MyTuple");
+        assertSchema("type-aliases-tuple-with-rest-element", "MyTuple");
     });
 
     describe("enums", () => {
@@ -255,13 +255,13 @@ describe("schema", () => {
     });
 
     describe("unions and intersections", () => {
-        assertSchema("type-union", "MyObject");
+        // assertSchema("type-union", "MyObject");
         assertSchema("type-intersection", "MyObject", {
             noExtraProps: true,
         });
-        assertSchema("type-union-tagged", "Shape");
-        assertSchema("type-aliases-union-namespace", "MyModel");
-        assertSchema("type-intersection-recursive", "*");
+        // assertSchema("type-union-tagged", "Shape");
+        // assertSchema("type-aliases-union-namespace", "MyModel");
+        // assertSchema("type-intersection-recursive", "*");
     });
 
     describe("annotations", () => {
