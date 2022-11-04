@@ -255,13 +255,13 @@ describe("schema", () => {
     });
 
     describe("unions and intersections", () => {
-        // assertSchema("type-union", "MyObject");
+        assertSchema("type-union", "MyObject");
         assertSchema("type-intersection", "MyObject", {
             noExtraProps: true,
         });
-        // assertSchema("type-union-tagged", "Shape");
-        // assertSchema("type-aliases-union-namespace", "MyModel");
-        // assertSchema("type-intersection-recursive", "*");
+        assertSchema("type-union-tagged", "Shape");
+        assertSchema("type-aliases-union-namespace", "MyModel");
+        assertSchema("type-intersection-recursive", "*");
     });
 
     describe("annotations", () => {
